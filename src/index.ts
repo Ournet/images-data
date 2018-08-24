@@ -1,4 +1,4 @@
 
 export {
-    RepositoryBuilder,
+    ImageRepositoryBuilder,
 } from './repository-builder';
