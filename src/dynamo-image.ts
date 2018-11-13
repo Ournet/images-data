@@ -2,10 +2,10 @@
 import DynamoDB = require('aws-sdk/clients/dynamodb');
 import { Image } from "@ournet/images-domain";
 import {
-    DynamoModel,
-} from 'dynamo-model';
+    DynamoItem,
+} from 'dynamo-item';
 
-export class ImageModel extends DynamoModel<{ id: string }, Image> {
+export class ImageModel extends DynamoItem<{ id: string }, Image> {
     constructor(client: DynamoDB.DocumentClient, tableSuffix: string) {
         super({
             hashKey: {
@@ -14,6 +14,6 @@ export class ImageModel extends DynamoModel<{ id: string }, Image> {
             },
             name: 'images',
             tableName: `ournet_images_${tableSuffix}`,
-        }, client);
+        }, client as any);
     }
 }
