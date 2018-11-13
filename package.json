@@ -1,6 +1,6 @@
 {
   "name": "@ournet/images-data",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Ournet images data module",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
